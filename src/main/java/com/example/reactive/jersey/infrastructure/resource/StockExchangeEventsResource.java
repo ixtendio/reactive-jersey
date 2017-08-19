@@ -29,11 +29,6 @@ public class StockExchangeEventsResource {
     private static final List<String> ALL_MARKET_LOCATIONS = Arrays.asList("US", "MX");
 
     @GET
-    public Response getStatus() {
-        return Response.status(Response.Status.CREATED).entity("{\"status\":\"OK\"}").build();
-    }
-
-    @GET
     @Path("{companySymbol}/{market}/{period}")
     public void companyStockExchangeByMarketAndPeriod(@PathParam("companySymbol") final String companySymbol,
                                                       @PathParam("market") final String market,
